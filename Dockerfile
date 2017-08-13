@@ -18,4 +18,4 @@ EXPOSE 4000
 
 WORKDIR $BOOKDIR
 
-ENTRYPOINT /usr/local/bin/gitbook
+ENTRYPOINT ["/usr/local/bin/gitbook"]
