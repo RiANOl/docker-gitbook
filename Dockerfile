@@ -4,7 +4,7 @@ LABEL maintainer="Rianol Jou <rianol.jou@gmail.com>"
 
 RUN apk update &&\
     apk upgrade &&\
-    apk add openjdk8-jre graphviz &&\
+    apk add git openjdk8-jre graphviz &&\
     npm install -g gitbook-cli &&\
     gitbook fetch &&\
     rm -rf /tmp/*
