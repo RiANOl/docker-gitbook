@@ -1,13 +1,14 @@
-FROM node:6-alpine
+FROM node:8-alpine
 
 ARG VERSION=3.2.3
 
-LABEL maintainer="Rianol Jou <rianol.jou@gmail.com>" \
-      version=$VERSION
+LABEL maintainer="Rianol Jou <rianol.jou@gmail.com>"
 
-RUN npm install -g gitbook-cli &&\
-    gitbook fetch ${VERSION} &&\
-    npm cache clear &&\
+RUN apk update &&\
+    apk upgrade &&\
+    apk add openjdk8-jre graphviz &&\
+    npm install -g gitbook-cli &&\
+    gitbook fetch &&\
     rm -rf /tmp/*
 
 ENV BOOKDIR /gitbook
