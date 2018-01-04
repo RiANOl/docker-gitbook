@@ -1,7 +1,5 @@
 FROM node:8-alpine
 
-ARG VERSION=3.2.3
-
 LABEL maintainer="Rianol Jou <rianol.jou@gmail.com>"
 
 RUN apk update &&\
